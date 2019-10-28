@@ -37,7 +37,7 @@ startButton.addEventListener('click', () => {
   startButton.disabled = true;
   //used Date to account for browser lag
   const startTime = Date.now();
-  timer = setInterval(function() {
+  const timer = setInterval(function() {
     // milliseconds elapsed since start, removed unneeded zero
     let current = (Date.now() - startTime) / 10;
     //set variables with value for each digit
