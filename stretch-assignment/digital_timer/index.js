@@ -31,13 +31,15 @@ body.style.textAlign = 'center';
 buttonDiv.style.width = "100%";
 startButton.style.marginRight = '5%';
 
+//declared timer in global scope to allow timer function to stop itself easily 
+let timer;
 //timer function is defined within event listener
 startButton.addEventListener('click', () => {
   digits.forEach(num => num.style.color = 'black');
   startButton.disabled = true;
   //used Date to account for browser lag
   const startTime = Date.now();
-  const timer = setInterval(function() {
+  timer = setInterval(function() {
     // milliseconds elapsed since start, removed unneeded zero
     let current = (Date.now() - startTime) / 10;
     //set variables with value for each digit
