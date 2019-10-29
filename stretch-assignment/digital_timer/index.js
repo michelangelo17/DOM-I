@@ -52,8 +52,7 @@ startButton.addEventListener('click', () => {
       msHundredsHTML.textContent = msHundreds;
       secondOnesHTML.textContent = secondOnes;
       secondTensHTML.textContent = secondTens;
-    } 
-    if (secondTens > 0) {
+    } else {
       digits.forEach(num => num.style.color = 'red');
       startButton.disabled = false;
       return clearInterval(timer);
